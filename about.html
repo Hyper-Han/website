@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>HYPER's Web</title>
+    <title>HYPER's Web about</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,6 +12,120 @@
 </head>
 
 <body>
+    <header class="bs-docs-nav navbar navbar-static-top" id="top"></header>
+    <!-- 登录模态框 -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <h4 class="modal-title">登录</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- 模态框主体 -->
+                <div class="modal-body">
+                    <main class="form-signin">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="邮箱/用户名">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="密码">
+                            </div>
+
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> 记住密码
+                                </label>
+                            </div>
+
+                            <div class="d-grid gap-3">
+                                <button class=" btn  btn-primary  btn-block gap-3 " type="submit" data-dismiss="modal"
+                                    data-toggle="alert-success" data-target="success">登录</button>
+                                <p class="text-muted">还没用账号？</p>
+                                <button class=" btn  btn-outline-primary btn-block" type="submit" data-dismiss="modal"
+                                    data-toggle="modal" data-target="#SignModal">去注册</button>
+                            </div>
+                            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+                        </form>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 注册模态框 -->
+    <div class="modal fade" id="SignModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <h4 class="modal-title">注册</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- 模态框主体 -->
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="form-group row">
+                                <label for="inputname">账号：</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputname" placeholder="用户名">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword">密码：</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="密码">
+                                </div>
+                            </div>
+                            <div class="col-sm-10 row form-check-inline">
+                                <div class="form-check form-check-inline">
+                                    <label>性别：</label>
+                                    <input class="form-check-input " type="radio" name="gridRadios" id="gridRadios1"
+                                        value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        男
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                        value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        女
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-10 row form-check-inline my-4">
+                                <label>籍贯：</label>
+                                <select class="form-select" id="specificSizeSelect">
+                                    <option selected>--请选择--</option>
+                                    <option value="1">北京</option>
+                                    <option value="2">上海</option>
+                                    <option value="3">广州</option>
+                                </select>
+                            </div>
+                            <div class="form-group row ">
+                                <label for="customFile">头像：</label>
+                                <div class="custom-file col-sm-10">
+                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">选择文件</label>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-3">
+                                <button class=" btn  btn-primary  btn-block gap-3 " type="submit">注册</button>
+                                <button class=" btn  btn-outline-primary btn-block" type="submit" data-dismiss="modal"
+                                    data-toggle="modal" data-target="#myModal">去登录</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <a class="navbar-brand" href="index.html">首页</a>
@@ -41,7 +155,6 @@
                         <div class="d-grid gap-3">
                             <button type="button" class="btn btn-outline-primary" data-toggle="modal"
                                 data-target="#myModal">登录</button>
-
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#SignModal">注册</button>
                         </div>
@@ -54,8 +167,7 @@
         <hr class="my-5">
         <div class="container row text-center">
             <div class="card col-sm-4">
-                <img class="card-img-top" src="https://static.runoob.com/images/mix/img_avatar.png" alt="Card image"
-                    height="50%" width="50%">
+                <img class="card-img-top" src="https://static.runoob.com/images/mix/img_avatar.png" alt="Card image">
                 <div class="card-body">
                     <h4 class="card-title">韩银鹏</h4>
                     <p class="card-text">就读于浙江经济职业技术学院</p>
@@ -63,8 +175,7 @@
                 </div>
             </div>
             <div class="col-sm-8 ">
-                <h1>个人简历</h1>
-                <p></p>
+                <h1>联系我</h1>
                 <dl>
                     <dt>邮箱</dt>
                     <dd>- 1812787758@qq.com</dd>
@@ -79,10 +190,10 @@
             <footer class="py-3 my-4">
                 <hr class="featurette-divider">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">首页</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">壁纸</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">音乐</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">关于</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">首页</a></li>
+                    <li class="nav-item"><a href="wallpaper.html" class="nav-link px-2 text-muted">壁纸</a></li>
+                    <li class="nav-item"><a href="masonry.html" class="nav-link px-2 text-muted">音乐</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">关于</a></li>
                 </ul>
                 <div class="float-right">
                     <a href="#top" class="back-to-top btn btn-primary" role="button"> 回到顶部 </a>
